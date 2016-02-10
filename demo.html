@@ -23,7 +23,12 @@
         test.innerHTML = "";
     }
     function getnowdept(){
-        test.innerHTML = "目前選擇的系所是："+ mydept[mydept.selectedIndex].value +" "+ mydept[mydept.selectedIndex].text;
+        if (mydept[mydept.selectedIndex].value != -1) {
+            test.innerHTML = "目前選擇的系所是："+ mydept[mydept.selectedIndex].value +" "+ mydept[mydept.selectedIndex].text;
+        }else{
+            test.innerHTML = "請選擇系所！";
+
+        }
     }
 
 </script>
